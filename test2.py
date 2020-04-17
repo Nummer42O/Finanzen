@@ -23,7 +23,7 @@ class App(Tk):
         self.bind('<ButtonRelease-1>',self.drop)
     def create_new(self):
         tab=Frame(self.top,bg=bg)
-        tab.columnconfigure((0,3),uniform='roundings',weight=1,minsize=d)
+        tab.columnconfigure((0,3),uniform='roundings',weight=1,minsize=r/2)
         tab.columnconfigure(1,weight=1)
         tab.l=left=Canvas(tab,highlightthickness=0,width=d,height=1)
         tab.r=right=Canvas(tab,highlightthickness=0,width=d,height=1)
