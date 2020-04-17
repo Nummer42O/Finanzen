@@ -1,12 +1,17 @@
 from extras import *
 
+<<<<<<< HEAD
 class App(Tk): #top height: 45
+=======
+class App(Tk):
+>>>>>>> combined-tests
     def __init__(self):
         Tk.__init__(self)
         self.container=Frame(self,container=True)
         self.container.pack(fill=BOTH,expand=True,padx=10,pady=10)
         self.cid=self.container.winfo_id()
 
+<<<<<<< HEAD
         self.toplevel=Toplevel(self,bg='red')
         self.update()
         self.x,self.y=self.toplevel.winfo_x(),self.toplevel.winfo_y()
@@ -38,5 +43,15 @@ class App(Tk): #top height: 45
                 self.iswindow=False
                 self.width=self.toplevel.winfo_width()
                 self.toplevel.config(use=self.cid)
+=======
+        self.toplevel=Toplevel(t,bg='red',use=self.cid)
+        self.iswindow=False
+
+        self.bind('<Button-1>',self.select)
+        self.bind('<Button1-Motion>',self.drag)
+        self.bind('<ButtonRelease-1>',self.drop)
+    def select(self,event):
+
+>>>>>>> combined-tests
 if __name__=='__main__':
     App().mainloop()
