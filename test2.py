@@ -81,7 +81,7 @@ class App(Tk):
         widget.lift()
     def drag(self,event):
         if not self.widget: return
-        newx=self.winfo_pointerx()-self.dx
+        newx=self.winfo_pointerx()-self.dx-self.top.winfo_rootx()
         if newx<5: newx=5
         self.widget.place(x=newx)
         if newx>=self.ghost.winfo_x()+self.ghost.treshold:
